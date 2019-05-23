@@ -43,6 +43,13 @@ app.get('/success', (req, res) => {
 app.get('*', (req, res) => {
   res.render('notFound');
 });
+// app.use(function(req, res, next) {
+//   if (req.originalUrl && req.originalUrl.split('/').pop() === 'favicon.ico') {
+//     return res.sendStatus(204);
+//   }
+
+//   return next();
+// });
 
 const port = process.env.PORT || 5000;
 app.listen(port, () => {
